@@ -20,7 +20,7 @@ public class villagerScript : MonoBehaviour
     private Vector2 startPosition;  // Start position of the lerp
     private float timeElapsed;
 
-    public void enter()
+    public void enter(string p)
     {
         VillagerAnimator.SetTrigger("walk");
         PositionAnimator.SetTrigger("enter");
@@ -33,6 +33,9 @@ public class villagerScript : MonoBehaviour
         startPosition = Vector2.zero;  // Starting at (0,0)
         timeElapsed = 0;
         lerpTo = true;
+
+        problem = p;
+        //problem = gameLoop.instance.problems[Random.Range(0, gameLoop.instance.problems.Length)];
 
         StartCoroutine(arrived());
 
@@ -82,10 +85,23 @@ public class villagerScript : MonoBehaviour
         //gameObject.SetActive(false);
     }
 
-    public void leave()
-    {
+    public ParticleSystem ps;
 
+    public void happy()
+    {
+        if (ps == null)
+            return;
+        Debug.Log("firing particle system");
+        ps.Play();
+        StartCoroutine(leave());
     }
+
+    IEnumerator leave()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(this.wrapper.gameObject);
+    }
+
 
     public void die()
     {
@@ -97,8 +113,8 @@ public class villagerScript : MonoBehaviour
     }
     IEnumerator kms()
     {
-
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5f);
+        villagerManager.activeVillagers.Remove(this);
         Destroy(this.wrapper.gameObject);
     }
 

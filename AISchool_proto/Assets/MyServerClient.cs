@@ -27,6 +27,32 @@ namespace LLMUnitySamples
             playerText.Select();
         }
 
+        public void ask(string message)
+        {
+            Debug.Log("1");
+            if (gameLoop.instance.LLMAnswer != null)
+                return;
+
+            Debug.Log("2");
+            _ = llm.Chat(message, receive, done, false);
+        }
+
+        string answer = "";
+
+        public void done()
+        {
+            Debug.Log("done! " + answer);
+            gameLoop.instance.LLMAnswer = answer;
+            gameLoop.instance.callback1();
+        }
+
+        public void receive(string text)
+        {
+            //gameLoop.instance.LLMAnswer = text;
+            answer = text;
+            //Debug.Log(text);
+        }
+
         public void onInputFieldSubmit(string message)
         {
             playerText.interactable = false;
@@ -52,15 +78,19 @@ namespace LLMUnitySamples
         public LLM llm;
         public TMP_InputField playerText1;
         public TMP_Text AIText1;
-        MyServerClientInteraction interaction1;
+        public MyServerClientInteraction interaction1;
 
         public LLMClient llmClient;
         public TMP_InputField playerText2;
         public TMP_Text AIText2;
-        MyServerClientInteraction interaction2;
+        public MyServerClientInteraction interaction2;
+
+        public static MyServerClient instance;
 
         void Start()
         {
+            instance = this;
+
             interaction1 = new MyServerClientInteraction(playerText1, AIText1, llm);
             //interaction2 = new MyServerClientInteraction(playerText2, AIText2, llmClient);
             interaction1.Start();

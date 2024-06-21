@@ -20,8 +20,14 @@ public class ComfyPromptCtr : MonoBehaviour
     public static GameObject activeSpell = null;
 
     public TMP_InputField pInput;
+
+    public static ComfyPromptCtr instance;
+
+    public static bool generating = false;
+
     private void Start()
     {
+        instance = this;
         // QueuePrompt("pretty man","watermark");
         pInput.onSubmit.AddListener(myQPrompt);
     }
@@ -36,6 +42,12 @@ public class ComfyPromptCtr : MonoBehaviour
 
     public void myQPrompt(string message)
     {
+        gameLoop.instance.handlePlayerInput(pInput.text);
+    }
+
+    public void startGeneration(string message)
+    {
+        generating = true;
         pInput.interactable = false;
         StartCoroutine(QueuePromptCoroutine(pInput.text + AddToPromptText, NegativePromptText));
         result.SetActive(false);

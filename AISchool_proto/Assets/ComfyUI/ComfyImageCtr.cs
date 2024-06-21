@@ -92,6 +92,9 @@ public void RequestFileName(string id){
     }
 
     public Image outputImage;
+
+    public conjurationArchive[] archives;
+    int nextArchive = 0;
     
      IEnumerator DownloadImage(string imageUrl)
     {
@@ -111,7 +114,17 @@ public void RequestFileName(string id){
 
                 outputImage.gameObject.SetActive(true);
                 outputImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
-    
+                
+                if(nextArchive < archives.Length)
+                {
+                    archives[nextArchive++].setUp(outputImage.sprite, input.text);
+                }
+                else
+                {
+                    archives[nextArchive%archives.Length].setUp(outputImage.sprite, input.text);
+                    nextArchive++;
+                }
+
             }
             else
             {
@@ -121,6 +134,7 @@ public void RequestFileName(string id){
             input.text = "";
             input.interactable = true;
             input.Select();
+            ComfyPromptCtr.generating = false;
         }
     }
 }
