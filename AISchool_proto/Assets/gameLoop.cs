@@ -104,7 +104,7 @@ public class gameLoop : MonoBehaviour
 
         int problemsNumber = villagerCounter;
 
-        string problemPrompt = "imagine you have a problem. the answer to the problem is a " + problem + ". for example - bread can solve i am hungry and i want to feed ducks. give me " + problemsNumber + " such problems, make it one short sentence with ten words or less and no commas. return only the problems, not the solutions. do not mention the word " + problem + " in the response. return the response as a list in sqaure brackets, for example [problem 1, problem2]. "; // return the problems in a JSON format {problems:[problem1, problem2, problem3]}. the response has to be in JSON format";
+        string problemPrompt = "imagine you have a problem. the answer to the problem is a " + problem + ". for example - bread can solve i am hungry and i want to feed ducks. give me " + problemsNumber + " such problems, make it one short sentence with 7 words or less and no commas. return only the problems, not the solutions. do not mention the word " + problem + " in the response. give the problems as a list, for example [problem 1, problem2, problem3]. "; // return the problems in a JSON format {problems:[problem1, problem2, problem3]}. the response has to be in JSON format";
 
         Debug.Log("Asking LLM: " + problemPrompt);
         step = 0;
@@ -133,6 +133,17 @@ public class gameLoop : MonoBehaviour
         LLMAnswer = LLMAnswer.Replace("[", "");
         LLMAnswer = LLMAnswer.Replace("]", "");
         LLMAnswer = LLMAnswer.Replace("\"", "");
+        LLMAnswer = LLMAnswer.Replace("1", "");
+        LLMAnswer = LLMAnswer.Replace("2", "");
+        LLMAnswer = LLMAnswer.Replace("3", "");
+        LLMAnswer = LLMAnswer.Replace("4", "");
+        LLMAnswer = LLMAnswer.Replace("5", "");
+        LLMAnswer = LLMAnswer.Replace("6", "");
+        LLMAnswer = LLMAnswer.Replace("7", "");
+        LLMAnswer = LLMAnswer.Replace("8", "");
+        LLMAnswer = LLMAnswer.Replace("9", "");
+        LLMAnswer = LLMAnswer.Replace("0", "");
+        LLMAnswer = LLMAnswer.Replace(".", "");
 
 
         string[] substrings = LLMAnswer.Split(',');
@@ -278,7 +289,7 @@ public class gameLoop : MonoBehaviour
             villagerCounter = 9;
 
         villagerManager.instance.problemQueue.Clear();
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(2f);
         initProblem();
         // have peasants come again
 
@@ -332,7 +343,7 @@ public class gameLoop : MonoBehaviour
     {
         if(!started)
         {
-            witchSays("Everyone, come to my hut and start wishing! It wont cost much, just your soul! Hehe");
+            //witchSays("Everyone, come to my hut and start wishing! It wont cost much, just your soul! Hehe");
 
             initProblem();
             started = true;

@@ -50,7 +50,7 @@ public class villagerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(problemQueue.Count > 0 && activeVillagers.Count <= gameLoop.instance.villagerCounter)
+        if(problemQueue.Count > 0 && activeVillagers.Count < gameLoop.instance.villagerCounter)
         {
             if ((c + cd) < Time.time)
             {

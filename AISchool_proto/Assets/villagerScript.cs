@@ -20,6 +20,16 @@ public class villagerScript : MonoBehaviour
     private Vector2 startPosition;  // Start position of the lerp
     private float timeElapsed;
 
+    public void exit()
+    {
+        VillagerAnimator.SetTrigger("walk");
+        PositionAnimator.SetTrigger("leave");
+        startPosition = targetOffset;
+        targetOffset = Vector2.zero;
+        timeElapsed = 0;
+        lerpTo = true;
+    }
+
     public void enter(string p)
     {
         VillagerAnimator.SetTrigger("walk");
@@ -93,11 +103,13 @@ public class villagerScript : MonoBehaviour
             return;
         Debug.Log("firing particle system");
         ps.Play();
+        bubble.SetActive(false);
         StartCoroutine(leave());
     }
 
     IEnumerator leave()
     {
+        exit();
         yield return new WaitForSeconds(5f);
         Destroy(this.wrapper.gameObject);
     }
