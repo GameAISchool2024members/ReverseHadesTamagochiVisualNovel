@@ -42,7 +42,7 @@ namespace LLMUnitySamples
         public void AIReplyComplete()
         {
             playerText.interactable = true;
-            playerText.Select();
+            //playerText.Select();
             playerText.text = "";
         }
     }

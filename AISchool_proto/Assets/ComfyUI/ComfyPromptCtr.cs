@@ -15,6 +15,10 @@ public class ComfyPromptCtr : MonoBehaviour
 {
     public InputField nInput,promptJsonInput;
 
+    public GameObject[] spells;
+    public GameObject result;
+    public static GameObject activeSpell = null;
+
     public TMP_InputField pInput;
     private void Start()
     {
@@ -24,7 +28,6 @@ public class ComfyPromptCtr : MonoBehaviour
 
     public void QueuePrompt()
     {
-        pInput.interactable = false;
         StartCoroutine(QueuePromptCoroutine(pInput.text,nInput.text));
     }
 
@@ -33,7 +36,11 @@ public class ComfyPromptCtr : MonoBehaviour
 
     public void myQPrompt(string message)
     {
+        pInput.interactable = false;
         StartCoroutine(QueuePromptCoroutine(pInput.text + AddToPromptText, NegativePromptText));
+        result.SetActive(false);
+        activeSpell = spells[UnityEngine.Random.Range(0, spells.Length)];
+        activeSpell.SetActive(true);
     }
 
     public int resolutionImageX = 200, resolutionImageY = 200;

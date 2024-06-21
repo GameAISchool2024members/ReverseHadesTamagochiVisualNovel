@@ -34,6 +34,7 @@ Sprites
 https://lyaseek.itch.io/minifvillagers
 https://lyaseek.itch.io/minifvillagers2
 https://opengameart.org/content/pixel-speech-bubbles
+https://bdragon1727.itch.io/pixel-holy-spell-effect-32x32-pack-3
 
 all-MiniLM-L6-v2 Transformer using Sentis for Unity (com.unity.sentis)
 https://thomassimonini.substack.com/p/create-an-ai-robot-npc-using-hugging?r=dq5fg&triedRedirect=true

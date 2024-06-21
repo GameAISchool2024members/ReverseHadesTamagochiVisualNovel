@@ -106,8 +106,10 @@ public void RequestFileName(string id){
                 Texture2D texture = ((DownloadHandlerTexture)webRequest.downloadHandler).texture;
 
                 texture.filterMode = FilterMode.Point;
-                
 
+                ComfyPromptCtr.activeSpell.SetActive(false);
+
+                outputImage.gameObject.SetActive(true);
                 outputImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
     
             }
