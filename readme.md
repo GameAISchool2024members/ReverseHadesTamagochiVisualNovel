@@ -1,8 +1,9 @@
-# One Spell fits all
+# One Spell Fits All
 
 In the land of AI and Games conferences 4 brave adventurers set out to create a game.
 
 You are a witch who struggles with her magic, you can create anything but for a limited amount of time. How can you please all these villagers who come to you with their problems?
+
 ![Confusing Game](AISchool_proto/Assets/theWitch.png)
 
 We use a variety of generative tools to create both the problems that the villagers come to you with and the responses they give you. We feed the LLM the solution to the problem and the problems are created from this one word. The solution
