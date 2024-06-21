@@ -14,7 +14,7 @@ We use a variety of generative tools to create both the problems that the villag
 
 ![Confusing Game](AISchool_proto/Assets/screenshot2.png)
 
-![Confusing Game](AISchool_proto/Assets/Diagram1.png)
+![Confusing Game](AISchool_proto/Assets/Diagram3.png)
 
 
 
