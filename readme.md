@@ -43,4 +43,10 @@ This project is inspired by [1001 Nights](https://store.steampowered.com/app/254
 ### Custom Sprites
 - **Tool:** OpenAI's Dall-E
 
+### Team 
+- Tom 
+- Dipika
+- Georgia
+- Kseniia  
+
 Stay tuned for more updates and get ready to dive into our confusing yet exciting game soon!
