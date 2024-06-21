@@ -2,6 +2,12 @@ henlo
 this is a readme
 a very confusing game will appear here soon maybe hopefully
 
+imagine using an LLM, image generation, and a transformer in your game, but all locally!
+no need for APIs, or even internet access! Also, your energy consumption is limited to your laptop so you are even being sustainable!
+
+
+Inspired by 1001 Nights (go wishlist it!)
+https://store.steampowered.com/app/2542850/1001_Nights/
 
 
 Stuff we (maybe) use(d):
@@ -25,6 +31,7 @@ https://openart.ai/workflows/megaaziib/pixel-art-fast-generator/XkwkHIWGhMLWxQuB
 Sprites
 https://lyaseek.itch.io/minifvillagers
 https://lyaseek.itch.io/minifvillagers2
+https://opengameart.org/content/pixel-speech-bubbles
 
 all-MiniLM-L6-v2 Transformer using Sentis for Unity (com.unity.sentis)
 https://thomassimonini.substack.com/p/create-an-ai-robot-npc-using-hugging?r=dq5fg&triedRedirect=true
