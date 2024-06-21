@@ -37,6 +37,7 @@ This project is inspired by [1001 Nights](https://store.steampowered.com/app/254
 - [Minif Villagers 2](https://lyaseek.itch.io/minifvillagers2)
 - [Pixel Speech Bubbles](https://opengameart.org/content/pixel-speech-bubbles)
 - [Pixel Holy Spell Effect 32x32 Pack 3](https://bdragon1727.itch.io/pixel-holy-spell-effect-32x32-pack-3)
+- [Heart](https://gamedevshlok.itch.io/heartpack)
 
 ### Transformers
 - **Model:** all-MiniLM-L6-v2
