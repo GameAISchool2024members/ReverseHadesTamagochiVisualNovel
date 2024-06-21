@@ -8,7 +8,7 @@ You are a witch who struggles with her magic, you can create anything but for a 
 
 ![Confusing Game](AISchool_proto/Assets/theWitch.png)
 
-We use a variety of generative tools to create both the problems that the villagers come to you with and the responses they give you. We feed the LLM the solution to the problem and the problems are created from this one word. The solution is then checked using a transformer to satisfy the villagers. 
+We use a variety of generative tools to create both the problems that the villagers come to you with and the responses they give you. We feed the LLM the solution to the problem and the problems are created from this one word. The solution is then checked using a transformer to satisfy the villagers. Imagine using an LLM, image generation, and a transformer in your game, but all locally! No need for APIs, or even internet access! Also, your energy consumption is limited to your laptop so you are even being sustainable!
 
 ![Confusing Game](AISchool_proto/Assets/Diagram1.png)
 
