@@ -7,7 +7,7 @@ You are a witch who struggles with her magic, you can create anything but for a 
 
 We use a variety of generative tools to create both the problems that the villagers come to you with and the responses they give you. We feed the LLM the solution to the problem and the problems are created from this one word. The solution
 
-![Confusing Game](AISchool_proto/Assets/Diagram.png)
+![Confusing Game](AISchool_proto/Assets/Diagram1.png)
 
 
 ## Inspiration
