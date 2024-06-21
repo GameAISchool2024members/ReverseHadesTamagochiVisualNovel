@@ -3,7 +3,7 @@ this is a readme
 a very confusing game will appear here soon maybe hopefully
 
 imagine using an LLM, image generation, and a transformer in your game, but all locally!
-no need for APIs, or even internet access! Also, your energy consumption is limited to your laptop so you are even being sustainable!
+no need for APIs, or even internet access! Also, your energy consumption is limited to your PC so you are even being sustainable!
 
 
 Inspired by 1001 Nights (go wishlist it!)
