@@ -27,6 +27,8 @@ https://www.youtube.com/watch?v=iJUhw5hTiVI
 Pixel Art Fast Generator for ComfyUI
 https://openart.ai/workflows/megaaziib/pixel-art-fast-generator/XkwkHIWGhMLWxQuBIsd1
 
+RMBG for ComfyUI
+https://github.com/ZHO-ZHO-ZHO/ComfyUI-BRIA_AI-RMBG/tree/main
 
 Sprites
 https://lyaseek.itch.io/minifvillagers
@@ -35,4 +37,6 @@ https://opengameart.org/content/pixel-speech-bubbles
 
 all-MiniLM-L6-v2 Transformer using Sentis for Unity (com.unity.sentis)
 https://thomassimonini.substack.com/p/create-an-ai-robot-npc-using-hugging?r=dq5fg&triedRedirect=true
+
+OpenAI's Dall-E to create some custom sprites
 
