@@ -45,9 +45,9 @@ This project is inspired by [1001 Nights](https://store.steampowered.com/app/254
 - **Tool:** OpenAI's Dall-E
 
 ### Team 
-- Tom 
-- Dipika
-- Georgia
-- Kseniia  
+- Tom Tucek
+- Dipika Rajesh
+- Georgia Samaritaki
+- Kseniia Harshina 
 
 Stay tuned for more updates and get ready to dive into our confusing yet exciting game soon!
